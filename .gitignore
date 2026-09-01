@@ -1,0 +1,17 @@
+# 隐私/密钥：绝不提交
+*.jks
+*.idsig
+*.keystore
+*.apk
+node_modules/
+.vercel/
+.vercel-data/
+_deploy-vercel.cjs
+_tailscale-state.txt
+
+# 个人/敏感资料：提交前必须删除（本仓库默认不含）
+aaa/
+成绩/
+*.xlsx
+*.pdf
+构建脚本/dl.js   # 仅下载器，不含密钥，可保留；如担心可忽略
