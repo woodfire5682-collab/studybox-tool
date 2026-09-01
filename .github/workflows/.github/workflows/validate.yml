@@ -1,0 +1,18 @@
+name: validate
+
+on:
+  push:
+    paths: ['学习工具箱.html', 'studybox-tool/index.html', 'scripts/**']
+  pull_request:
+    paths: ['学习工具箱.html', 'studybox-tool/index.html', 'scripts/**']
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: 校验工具箱 HTML/JS
+        run: node scripts/validate-html.js
